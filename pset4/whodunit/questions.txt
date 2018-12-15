@@ -1,0 +1,12 @@
+1.  Stdint.h is a header file for definitions, data types and functions relating to BMPs
+2.  They are the definitions of the different data types in use and the number of bits each unit of them needs
+3.  1, 4, 4, 2
+4.  BM, 0x424d
+5.  bfsize is the size of the file in bytes including pixel, heading and padding. bisize is the size of the image in pixels including the padding and pixels.
+6.  Its a top down DIP, with the origin in the upper left corner, else it is the bottom-up dip with the origin in the lower left
+7.  bitcount
+8.  Not enough memory in the computer
+9.  Number of elements to read
+10. 0
+11. Its finds the address to take a pointer, in order to make the edits 
+12. Current position of the file pointer

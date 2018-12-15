@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Main Page
+{% endblock %}
+
+{% block main %}
+<div>
+    <p align="left">
+        Your Current Cash Balance: {{ cash }}
+    </p>
+
+<div align="center">
+    <table class="table table-striped" >
+    <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Name</th>
+                <th>Number of Shares</th>
+                <th>Price</th>
+                <th>TOTAL</th>
+            </tr>
+    </thead>
+
+    <tbody>
+        {% for stock in stocks %}
+        <tr>
+            <td> {{ stock["symbol"] }} </td>
+            <td> {{ stock["name"] }} </td>
+            <td> {{ stock["number"] }} </td>
+            <td> {{ stock["price"] }} </td>
+            <td> {{ stock["total"] }} </td>
+       </tr>
+        {% endfor %}
+    </tbody>
+
+    <tfoot>
+        <tr>
+            <td colspan="4"></td>
+            <td>{{ total }}</td>
+        </tr>
+    </tfoot>
+
+    </table>
+</div>
+    <p align="left">
+        Your Total Worth: {{ worth }}
+    </p>
+</div>
+
+
+{% endblock %}

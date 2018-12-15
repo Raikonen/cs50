@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+{% block main %}
+<div align="center">
+    <table class="table table-striped" >
+    <thead>
+            <tr>
+                <th>Type</th>
+                <th>Name</th>
+                <th>Number of Shares</th>
+                <th>Price Bought/Sold</th>
+                <th>Datetime</th>
+            </tr>
+    </thead>
+
+    <tbody>
+        {% for stock in history %}
+        <tr>
+            <td> {{ stock["type"] }} </td>
+            <td> {{ stock["stock"] }} </td>
+            <td> {{ stock["number"] }} </td>
+            <td> {{ stock["price"] }} </td>
+            <td> {{ stock["datetime"] }} </td>
+       </tr>
+        {% endfor %}
+    </tbody>
+
+    </table>
+
+
+{% endblock %}

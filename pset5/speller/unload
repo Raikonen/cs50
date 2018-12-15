@@ -1,0 +1,35 @@
+// Free a trie 
+void freeTrie (node* ptr)
+{
+    // Iterate over the children
+    for(int i = 0; i < 27; i++)
+    {
+        // If node has children
+        if(ptr->children[i] != NULL)
+        {
+            // Call recursively
+            freeTrie(ptr->children[i]);
+        }
+    }
+    //free the argument pointer
+    free(ptr);
+    return;
+}
+    // Create a node pointer 'curr' to point to the first node
+    node* curr = root;
+    
+    // Call the function
+    freeTrie(curr);
+
+    // Free Root
+    free(root);
+
+    // Check and return
+    if(root == NULL)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }

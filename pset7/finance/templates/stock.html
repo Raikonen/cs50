@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Stock
+{% endblock %}
+
+{% block main %}
+    <p>
+        Stock: {{ symbol }}
+    </p>
+    <p>
+        Price: {{ price }}
+    </p>
+    <form method="POST">
+    <div class="form-group">
+        <button class="btn btn-default" a href="{{ url_for('quote') }}">Return</button>
+    </div>
+    </form>
+{% endblock %}
